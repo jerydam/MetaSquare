@@ -22,9 +22,10 @@ const About = () => (
         variants={fadeIn('up', 'tween', 0.2, 1)}
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
       >
-         Welcome to <span className="font-extrabold text-white">MetaSquare</span>a decentralized event ticketing platform, where you can <span className="font-extrabold text-white">Buy</span> and <span className="font-extrabold text-white">
+         Welcome to <span className="font-extrabold text-white">MetaSquare</span> a decentralized event ticketing platform, where you can <span className="font-extrabold text-white">Buy</span> and <span className="font-extrabold text-white">
           Sell
-        </span>{' '} tickets to your favorite events without intermediaries or centralized authorities. At our platform, we believe that event ticketing should be transparent, secure, and accessible to everyone, regardless of their location or financial status.{' '}
+        </span>{' '} tickets to your favorite events without intermediaries or third party interference, everything is handled by the smart contract. At our platform, we believe that events go beyond the shows, it is a means for brands to connect 
+        with their fans and followers. That's why we are making this connection even more memorable with our <span className="font-extrabold text-white">Met5G2</span> NFTs <span className="font-extrabold text-white">minted</span> to only fans that show up.{' '}
         
         
                
