@@ -1,9 +1,10 @@
 'use client';
-import Connect from './Connect'
+
 import { motion } from 'framer-motion';
 
 import styles from '../styles';
 import { navVariants } from '../utils/motion';
+import Connect from './Connect';
 
 const Navbar = () => (
   <motion.nav
@@ -16,14 +17,12 @@ const Navbar = () => (
     <div
       className={`${styles.innerWidth} mx-auto flex justify-between gap-8`}
     >
-       <a href='/'className="font-extrabold text-[24px] leading-[30.24px] text-white">
+      <a href="/" className="font-extrabold text-[24px] leading-[30.24px] text-white">
         METASQUARE
       </a>
-      
-      <Connect/>
-     
-      </div>
+      <Connect />
+    </div>
   </motion.nav>
-);
 
+);
 export default Navbar;

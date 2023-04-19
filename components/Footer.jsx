@@ -41,7 +41,6 @@ const Footer = () => (
           <p className="font-normal text-[14px] text-white opacity-50">
             Copyright © 2023 MetaSquare. All rights reserved.
           </p>
-    
           <div className="flex gap-4">
             {socials.map((social) => (
               <img
