@@ -34,10 +34,10 @@ const Hero = () => (
         variants={slideIn("right", "tween", 0.2, 1)}
         className="relative w-full md:-mt-[20px] -mt-[12px]"
       >
-        {/* <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" /> */}
+        <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" />
 
         <img
-          src="/"
+          src="/cover.jpg"
           alt="hero_cover"
           className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
         />
