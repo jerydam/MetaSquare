@@ -1,15 +1,16 @@
-'use client';
+"use client";
 
-import { useState } from 'react';
-import { motion } from 'framer-motion';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import Link from "next/link";
 
-import styles from '../styles';
-import { exploreEvents } from '../constants';
-import { staggerContainer } from '../utils/motion';
-import { ExploreCard, TitleText, TypingText } from '../components';
+import styles from "../styles";
+import { exploreEvents } from "../constants";
+import { staggerContainer } from "../utils/motion";
+import { ExploreCard, TitleText, TypingText } from "../components";
 
 const Explore = () => {
-  const [active, setActive] = useState('world-2');
+  const [active, setActive] = useState("world-2");
 
   return (
     <section className={`${styles.paddings}`} id="explore">
@@ -22,9 +23,16 @@ const Explore = () => {
       >
         <TypingText title="| The World" textStyles="text-center" />
         <TitleText
-          title={<>Available Event <br className="md:block hidden" /> to explore</>}
+          title={
+            <>
+              <Link href="/events">
+                Available Event <br className="md:block hidden" /> to explore
+              </Link>
+            </>
+          }
           textStyles="text-center"
         />
+        {/* <Link href="/events">VIEW EVENTS</Link> */}
         <div className="mt-[50px] flex lg:flex-row flex-col min-h-[60vh] gap-3">
           {exploreEvents.map((world, index) => (
             <ExploreCard
@@ -33,7 +41,7 @@ const Explore = () => {
               index={index}
               active={active}
               handleClick={setActive}
-            />    
+            />
           ))}
         </div>
       </motion.div>

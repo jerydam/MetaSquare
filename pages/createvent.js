@@ -1,5 +1,6 @@
 import React from "react";
 import { Footer, Navbar } from "../components";
+import { ToastContainer, toast } from "react-toastify";
 import {
   erc20ABI,
   useAccount,
@@ -52,6 +53,7 @@ export default function Event() {
 
       onSuccess(data) {
         console.log("SUCCESSFULLY REGISTERED: ", data);
+        evSuccessCreated();
       },
 
       onError(error) {
@@ -61,6 +63,7 @@ export default function Event() {
 
   useEffect(() => {
     if (createEventData) {
+      onClick();
       console.log(createEventData);
     }
   }, [createEventData]);
@@ -87,6 +90,16 @@ export default function Event() {
 
     create?.();
   };
+
+  const notify = () => toast("Wow so easy !");
+
+  const evSuccessCreated = () =>
+    toast("Successfully Created Event", {
+      hideProgressBar: false,
+      autoClose: 2000,
+      type: "Success",
+      position: "bottom-right",
+    });
 
   //===================================================
   //==================================================
@@ -216,6 +229,7 @@ export default function Event() {
             <br />
 
             <button
+              onClick={notify}
               className="bg-[green] border border-blue-300 text-black rounded-md p-2 hover:bg-light-blue hover:text-blue border-radius mb-5"
               type="submit"
             >
@@ -227,7 +241,8 @@ export default function Event() {
         </div>
       </div>
 
-      {/* <Footer /> */}
+      <ToastContainer />
+      <Footer />
     </div>
   );
 }
