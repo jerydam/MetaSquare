@@ -24,8 +24,7 @@ const Hero = () => (
           className="flex flex-row justify-center items-center"
         >
           <h4 className={styles.herobasing}>
-            Revolutionize Your Event Experience with Meta Square - The Next
-            Generation of NFT Smart Ticketing!
+            {/* Revolutionize Your Event Experience with Meta Square. */}
           </h4>
         </motion.div>
       </div>
@@ -37,16 +36,16 @@ const Hero = () => (
         {/* <div className="absolute w-full h-[300px] hero-gradient rounded-tl-[140px] z-[0] -top-[30px]" /> */}
 
         <img
-          src="/"
+          src="/big.jpg"
           alt="hero_cover"
-          className="w-full sm:h-[500px] h-[350px] object-cover rounded-tl-[140px] z-10 relative"
+          className="w-3/4 sm:h-[500px] h-[350px] m-auto object-cover rounded-[20px] z-10 relative"
         />
 
         <a href="#">
           <div className="w-full flex justify-center sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
             <Link href="/createvent">
               <button
-                className="bg-[#6f71d4] border border-[#a5fafd] mt-4 md:mt-8 lg:mt-10 rounded-md py-3 px-6 text-lg lg:text-xl hover:bg-[#052C5B] hover:text-white"
+                className="bg-[#6f71d4] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-semibold mt-4 md:mt-8 lg:mt-10 rounded-md py-5 px-8 text-lg lg:text-xl hover: hover:text-blue-200"
                 type="submit"
               >
                 Create Event
