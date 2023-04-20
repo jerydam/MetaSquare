@@ -15,8 +15,11 @@ import childTicket from "../utils/childTicket.json";
 import { useRouter } from "next/router";
 
 const EventDeets = () => {
-  const eventAddress = useRouter();
+  const router = useRouter();
+  const eventAddress = router.query.address?.toString();
   const { address } = useAccount();
+
+  console.log(eventAddress);
 
   const {
     data: evtAdmin,

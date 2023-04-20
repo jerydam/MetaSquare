@@ -70,7 +70,7 @@ const events = () => {
           {eventDetails.map((event, _i) => {
             return (
               <Link
-                href={`${event.address}`}
+                href={`/eventDeets?address=${event.address}`}
                 key={_i}
                 className="col-span-1 border border-teal-400 rounded-xl p-4 mb-4 cursor-pointer"
               >
