@@ -1,17 +1,12 @@
-import Event from '../pages/createvent';
-
-let a = "https://ipfs.filebase.io/ipfs/";
-let b  = Event.uri.value;
-let link= a + b;
 export const exploreEvents = [
   {
     id: 'world-1',
-    imgUrl: link,
+    imgUrl: '/event1.jpg',
     title: 'World cup Final',
   },
   {
     id: 'world-2',
-    imgUrl: link,
+    imgUrl: '/event2.jpg',
     title: 'Facebook Seminar',
   },
   {
