@@ -28,9 +28,10 @@ export const exploreEvents = [
 
 export const startingFeatures = [
   'Event organizers create an event on the platform and set the ticket prices, quantity, and other details.',
-  'The event is published on the platform and attendees can browse and purchase tickets using cryptocurrency or traditional payment methods.',
+  'The event is published on the platform and attendees can browse and purchase tickets using cryptocurrency.',
   'The tickets are stored on the blockchain as unique, non-fungible tokens (NFTs) that represent ownership rights.',
   'Attendees can transfer, resell, or gift their tickets to other users on the platform, without the need for intermediaries or authorization from the organizer.',
+  'Attendees get proof of attendance certificate which are unique NFTs courtesy of MetaSquare',
   'Smart contracts automatically enforce the terms and conditions of the ticket sale, such as refund policies, transfer restrictions, and event cancellations.',
 ];
 
@@ -61,30 +62,30 @@ export const newFeatures = [
 
 export const insights = [
   {
-    imgUrl: '/planet-06.png',
+    imgUrl: '/illustre.webp',
     title: 'Transparency',
     subtitle:
         'With our platform, event organizers and attendees can benefit from increased transparency in the ticketing process',
   },
   {
-    imgUrl: '/planet-07.png',
+    imgUrl: '/iFlexi.jpg',
     title: 'Flexibility',
     subtitle:
         'Our platform provides event organizers with greater flexibility in setting ticket prices, quantities, and other details.',
   },
   {
-    imgUrl: '/sec.jpg',
+    imgUrl: '/trans.webp',
     title: 'Security',
     subtitle:
         'By leveraging blockchain technology and NFTs, our platform provides a high level of security and protection to event organizers and attendees.',
   },
   {
-    imgUrl:'/eff.jpg',
+    imgUrl:'/iEffi.jpg',
     title:'Efficiency',
     subtitle:'Our platform enables event organizers and attendees to interact directly, without the need for intermediaries or middlemen. '
   },
   {
-    imgUrl:'/planet-08.png',
+    imgUrl:'/innova.jpg',
     title:'Innovation',
     subtitle:'Our platform represents a novel and innovative approach to event ticketing that leverages cutting-edge technologies such as blockchain, NFTs, and smart contracts.'
   },
