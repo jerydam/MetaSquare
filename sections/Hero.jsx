@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 
 import styles from "../styles";
 import { slideIn, staggerContainer, textVariant } from "../utils/motion";
@@ -43,12 +44,14 @@ const Hero = () => (
 
         <a href="#">
           <div className="w-full flex justify-center sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
-            <button
-              className="bg-[#6f71d4] border border-[#a5fafd] mt-4 md:mt-8 lg:mt-10 rounded-md py-3 px-6 text-lg lg:text-xl hover:bg-[#052C5B] hover:text-white"
-              type="submit"
-            >
-              Create Event
-            </button>
+            <Link href="/createvent">
+              <button
+                className="bg-[#6f71d4] border border-[#a5fafd] mt-4 md:mt-8 lg:mt-10 rounded-md py-3 px-6 text-lg lg:text-xl hover:bg-[#052C5B] hover:text-white"
+                type="submit"
+              >
+                Create Event
+              </button>
+            </Link>
           </div>
         </a>
       </motion.div>
