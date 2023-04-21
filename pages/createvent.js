@@ -93,7 +93,7 @@ export default function Event() {
   //===================================================
 
   return (
-    <div>
+    <div className="bg-[#0a021a]">
       <Navbar />
 
       <div>
@@ -101,7 +101,7 @@ export default function Event() {
         Total Number Of Events created: {String(totalNoOfEvents)}
       </h1> */}
 
-        <div className="bg-[grey]">
+        <div className="bg-[#0a021a]">
           <h1>Login</h1>
           <form onSubmit={handleSubmit2}>
             <label>

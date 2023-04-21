@@ -94,38 +94,39 @@ export default function Event() {
   //===================================================
 
   return (
-    <div>
+    <div className="bg-[#0a021a]">
       <Navbar />
 
       <div>
         {/* <h1 className="font-bold font-weight:900 text-center my-3 justify-center ">
         Total Number Of Events created: {String(totalNoOfEvents)}
       </h1> */}
-
-        <div className="bg-[grey]">
-          <h1>Login</h1>
+        <div className="flex ml-12">
+          <h1 className="text-xl ">Create Event</h1>
+        </div>
+        <div className="flex justify-center items-center">
           <form onSubmit={handleSubmit2}>
-            <label>
+            <label className="text-lg ">
               Registeration Id: <br />
+            </label>
               <input
-                className="p-2 border border-orange-400"
+                className="p-2 border border-teal-800 py-3 rounded-md bg-slate-600"
                 type="number"
-                placeholder="Id"
+                placeholder="Enter event Id"
                 onChange={(e) => setid(e.target.value)}
               />
-            </label>
 
             <br />
             <label>
               Event Fee:
+            </label>
               <br />
               <input
                 className="p-2 border border-orange-400"
                 type="number"
-                placeholder="Price"
+                placeholder="Enter zero if event is free"
                 onChange={(e) => setEventFee(e.target.value)}
               />
-            </label>
 
             <br />
             <br />
@@ -135,7 +136,7 @@ export default function Event() {
               <input
                 className="p-2 border border-orange-400"
                 type="number"
-                placeholder="N0 of participant"
+                placeholder="No of participants"
                 onChange={(e) => setNoOfParticipants(e.target.value)}
               />
             </label>
@@ -185,7 +186,7 @@ export default function Event() {
               <input
                 className="p-1 border border-orange-700"
                 type="text"
-                placeholder="event uri"
+                placeholder="event NFT uri"
                 id="uri"
                 onChange={(e) => setEventUri(e.target.value)}
               />
@@ -194,31 +195,31 @@ export default function Event() {
             <br />
 
             <label>
-              Event Name:
+              NFT Name:
               <br />
               <input
                 className="p-2 border border-orange-400"
                 type="text"
-                placeholder="name"
+                placeholder="Event NFT name"
                 onChange={(e) => setName(e.target.value)}
               />
             </label>
             <br />
             <br />
             <label>
-              symbol:
+              NFt Symbol:
               <br />
               <input
                 className="p-2 border border-orange-400"
                 type="text"
-                placeholder="sympol"
+                placeholder="Event NFt sympol"
                 onChange={(e) => setSymbol(e.target.value)}
               />
             </label>
             <br />
 
             <button
-              className="bg-[green] border border-blue-300 text-black rounded-md p-2 hover:bg-light-blue hover:text-blue border-radius mb-5"
+              className="bg-[green] border border-blue-300 text-black rounded-md p-12 hover:bg-light-blue hover:text-blue border-radius mb-5"
               type="submit"
             >
               {createEventIsLoading || createWaitIsLoading
@@ -229,7 +230,7 @@ export default function Event() {
         </div>
       </div>
 
-      {/* <Footer /> */}
+      <Footer />
     </div>
   );
 }
