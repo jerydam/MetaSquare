@@ -79,6 +79,7 @@ const EventDeets = () => {
   useEffect(() => {
     if (regData) {
       console.log(regData);
+      console.log("registering");
     }
   }, [regData]);
 
