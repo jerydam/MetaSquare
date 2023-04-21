@@ -101,7 +101,7 @@ export default function Event() {
         {/* <h1 className="font-bold font-weight:900 text-center my-3 justify-center ">
         Total Number Of Events created: {String(totalNoOfEvents)}
       </h1> */}
-        <div className="flex ml-12">
+        <div className="flex ml-12 create2">
           <h1 className="text-xl ">Create Event</h1>
         </div>
         <div className="flex justify-center items-center">
@@ -226,7 +226,7 @@ export default function Event() {
                 ? "Creating event..."
                 : "Create Event"}
             </button>
-          </form>
+          </form> 
         </div>
       </div>
 

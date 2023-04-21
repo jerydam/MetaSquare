@@ -111,9 +111,25 @@
   color: #fff;
 }
 
+.create2 {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 28px;
+  margin: 16px 0;
+  font-weight: 600;
+}
+
 .btn {
-  background-color: #02cdd4;
+  background-color: #0680b1;
   color: white;
-  padding: 1 rem;
-  
+  font-weight: 500;
+  padding: 15px 32px;
+  margin: 20px 0;
+  border-radius: 30px;
+}
+
+.btn:hover {
+  opacity: 0.8;
 }
