@@ -1,5 +1,4 @@
 import Navbar from "../components/Navbar";
-import { useParams } from "next/navigation";
 import { ethers } from "ethers";
 import React, { useEffect, useState } from "react";
 import {
@@ -10,7 +9,7 @@ import {
   usePrepareContractWrite,
   useWaitForTransaction,
 } from "wagmi";
-import factoryAbi from "../utils/factoryAbi.json";
+
 import childTicket from "../utils/childTicket.json";
 import { useRouter } from "next/router";
 
@@ -18,8 +17,6 @@ const EventDeets = () => {
   const router = useRouter();
   const eventAddress = router.query.address?.toString();
   const { address } = useAccount();
-
-  console.log(eventAddress);
 
   const {
     data: evtAdmin,
@@ -49,7 +46,7 @@ const EventDeets = () => {
 
   useEffect(() => {
     if (evtName) {
-      console.log(`Event Admin is ${evtName}`);
+      console.log(`Event Name is ${evtName}`);
     }
   }, [evtName]);
 
