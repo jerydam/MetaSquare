@@ -5,13 +5,13 @@ const contact = () => {
     <div>
       <form action="https://formspree.io/f/mlekabld" method="POST">
         <label>
-          Email:
+          Email:<br/>
           <input type="email" name="email" />
-        </label>
+        </label><br/><br/>
         <label>
-          Message:
+          Message:<br/>
           <textarea name="message"></textarea>
-        </label>
+        </label><br/><br/>
 
         <button type="submit">Send</button>
       </form>
