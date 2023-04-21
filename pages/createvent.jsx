@@ -94,7 +94,7 @@ export default function Event() {
   //===================================================
 
   return (
-    <div className="bg-[#0a021a]">
+    <div className="bg2">
       <Navbar />
 
       <div>
@@ -219,7 +219,7 @@ export default function Event() {
             <br />
 
             <button
-              className="bg-[green] border border-blue-300 text-black rounded-md p-12 hover:bg-light-blue hover:text-blue border-radius mb-5"
+              className="bg-[green] btn border border-blue-300 text-black rounded-md p-12 hover:bg-light-blue hover:text-blue border-radius mb-5"
               type="submit"
             >
               {createEventIsLoading || createWaitIsLoading

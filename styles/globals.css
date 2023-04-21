@@ -105,3 +105,15 @@
   background: #65c4fa;
   filter: blur(150px);
 }
+
+.bg2 {
+  background-color: #0d0331;
+  color: #fff;
+}
+
+.btn {
+  background-color: #02cdd4;
+  color: white;
+  padding: 1 rem;
+  
+}
