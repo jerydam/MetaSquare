@@ -1,6 +1,5 @@
 import React from "react";
 import { Footer, Navbar } from "../components";
-import { ToastContainer, toast } from "react-toastify";
 import {
   erc20ABI,
   useAccount,
@@ -243,7 +242,7 @@ export default function Event() {
         </div>
       </div>
 
-      <ToastContainer />
+   
       <Footer />
     </div>
   );
