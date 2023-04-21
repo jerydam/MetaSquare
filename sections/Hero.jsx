@@ -59,6 +59,15 @@ const Hero = () => (
                 Create Event
               </button>
             </Link>
+
+            <Link href="/contact">
+              <button
+                className="bg-[#blue] border border-[#a5fafd] mt-4 md:mt-8 lg:mt-10 rounded-md py-3 px-6 text-lg lg:text-xl hover:bg-[#052C5B] hover:text-white"
+                type="submit"
+              >
+                Create ID
+              </button>
+            </Link>
           </div>
         </a>
       </motion.div>
