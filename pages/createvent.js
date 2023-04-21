@@ -1,6 +1,5 @@
 import React from "react";
 import { Footer, Navbar } from "../components";
-import { ToastContainer, toast } from "react-toastify";
 import {
   erc20ABI,
   useAccount,
@@ -117,12 +116,20 @@ export default function Event() {
           <h1 className="text-xl ">Create Event</h1>
         </div>
         <div className="flex justify-center items-center">
+        <div className="flex ml-12">
+          <h1 className="text-xl ">Create Event</h1>
+        </div>
+        <div className="flex justify-center items-center">
           <form onSubmit={handleSubmit2}>
+            <label className="text-lg ">
+              Registration Id: <br />
+            </label>
             <label className="text-lg ">
               Registration Id: <br />
             </label>
               <input
                 className="p-2 border border-teal-800 py-3 rounded-md bg-slate-600"
+                
                 type="number"
                 placeholder="Enter event Id"
                 onChange={(e) => setid(e.target.value)}
@@ -149,6 +156,7 @@ export default function Event() {
                 className="p-2 border border-orange-400"
                 type="number"
                 placeholder="No of participants"
+        
                 onChange={(e) => setNoOfParticipants(e.target.value)}
               />
             </label>
@@ -208,6 +216,7 @@ export default function Event() {
 
             <label>
               NFT Name:
+              NFT Name:
               <br />
               <input
                 className="p-2 border border-orange-400"
@@ -219,6 +228,7 @@ export default function Event() {
             <br />
             <br />
             <label>
+              NFt Symbol:
               NFt Symbol:
               <br />
               <input
@@ -242,8 +252,8 @@ export default function Event() {
           </form>
         </div>
       </div>
-
-      <ToastContainer />
+</div>
+   
       <Footer />
     </div>
   );
