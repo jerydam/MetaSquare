@@ -107,7 +107,7 @@ export default function Event() {
         <div className="flex justify-center items-center">
           <form onSubmit={handleSubmit2}>
             <label className="text-lg ">
-              Registeration Id: <br />
+              Registration Id: <br />
             </label>
               <input
                 className="p-2 border border-teal-800 py-3 rounded-md bg-slate-600"
