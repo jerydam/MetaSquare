@@ -29,7 +29,7 @@ const About = () => (
         with their fans and followers. That's why we are making this connection even more memorable with our <span className="font-extrabold text-white">Met5G2</span> NFTs <span className="font-extrabold text-white">minted</span> to only fans that show up.{' '}
         
         <div className="w-full flex justify-center sm:-mt-[70px] mt-[50px] pr-[40px] relative z-10">
-            <Link href="/Docs">
+            <Link href="/docs">
               <button
                 className="bg-[#6f71d4] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-semibold mt-4 mr-16 md:mt-8 ml-20 lg:mt-24 rounded-md py-5 px-8 text-lg lg:text-xl hover: hover:text-blue-200"
                 type="submit"
