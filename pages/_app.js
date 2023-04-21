@@ -3,11 +3,11 @@ import '../styles/globals.css';
 import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { configureChains, createClient, WagmiConfig } from 'wagmi';
-import { arbitrum, goerli, mainnet, polygonMumbai, optimism, sepolia } from 'wagmi/chains';
+import { goerli, mainnet, polygonMumbai} from 'wagmi/chains';
 import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
 
 const { chains, provider } = configureChains(
-  [arbitrum, goerli, mainnet, polygonMumbai, optimism, sepolia],
+  [goerli, mainnet, polygonMumbai],
   // https://eth-goerli.g.alchemy.com/v2/U4Q5B-2_p_WUMX2gBCL_ZYNpaRetbTgd
   [
     jsonRpcProvider({
