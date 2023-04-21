@@ -145,20 +145,26 @@ export default function Event() {
 
             <br />
             <label>
-              StartTime:
+              Registration start time:
               <br />
+
               <input
                 className="p-2 border border-orange-400"
                 type="time"
                 placeholder="Enter time the event commences (HH:mm:ss)"
                 onChange={(e) => {
                   const timeString = e.target.value;
-                  const date = new Date(`1970-01-01T${timeString}:00Z`);
-                  const unixTimestamp = Math.floor(date.getTime() / 1000);
+                  const date = new Date();
+                  const year = date.getFullYear();
+                  const month = date.getMonth() + 1;
+                  const day = date.getDate();
+                  const dateString = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+                  const dateTimeString = `${dateString}T${timeString}:00`;
+                  const unixTimestamp = Date.parse(dateTimeString) / 1000;
                   console.log(unixTimestamp);
-                  setStartTime(unixTimestamp);
                 }}
               />
+
             </label>
 
             <br />
@@ -171,10 +177,14 @@ export default function Event() {
                 placeholder="Enter time the event commences (HH:mm:ss)"
                 onChange={(e) => {
                   const timeString = e.target.value;
-                  const date = new Date(`1970-01-01T${timeString}:00Z`);
-                  const unixTimestamp = Math.floor(date.getTime() / 1000);
+                  const date = new Date();
+                  const year = date.getFullYear();
+                  const month = date.getMonth() + 1;
+                  const day = date.getDate();
+                  const dateString = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
+                  const dateTimeString = `${dateString}T${timeString}:00`;
+                  const unixTimestamp = Date.parse(dateTimeString) / 1000;
                   console.log(unixTimestamp);
-                  setEndTime(unixTimestamp);
                 }}
               />
             </label>

@@ -111,6 +111,11 @@
   color: #fff;
 }
 
+input {
+  color: #0d0331;
+  font-weight: 500;
+}
+
 .create2 {
   text-align: center;
   display: flex;
