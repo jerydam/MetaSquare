@@ -20,7 +20,9 @@ const Navbar = () => (
         href="/"
         className="font-extrabold text-[24px] leading-[30.24px] text-white"
       >
+         <button>
         METASQUARE
+      </button>
       </a>
          <a
         href="/"
