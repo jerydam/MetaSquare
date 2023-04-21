@@ -106,7 +106,7 @@ export default function Event() {
   //===================================================
 
   return (
-    <div className="bg-[#0a021a]">
+    <div className="bg-[#2d0f68]">
       <Navbar />
 
       <div>
