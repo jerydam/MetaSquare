@@ -64,7 +64,7 @@ const events = () => {
   }, [events]);
 
   return (
-    <div className="mt-10">
+    <div className="bck">
       <Navbar />
       {eventLoading || eventDetailsLoading ? (
         <div className="loading-message">The Page Is Loading ....</div>
