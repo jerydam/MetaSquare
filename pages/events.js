@@ -4,6 +4,8 @@ import React, { useEffect, useState } from "react";
 import { ethers } from "ethers";
 import factoryAbi from "../utils/factoryAbi.json";
 import childTicket from "../utils/childTicket.json";
+import { Footer, Navbar } from "../components";
+
 // import Navbar from "../components/Navbar";
 // import { Footer } from "../components";
 
@@ -63,34 +65,42 @@ const events = () => {
 
   return (
     <div className="mt-10">
+      <Navbar />
       {eventLoading || eventDetailsLoading ? (
-        <div>The Page Is Loading ....</div>
+        <div className="loading-message">The Page Is Loading ....</div>
       ) : (
-        <div className="grid grid-cols-4 gap-5">
-          {eventDetails.map((event, _i) => {
-            return (
-              <Link
-                href={`/eventDeets?address=${event.address}`}
-                key={_i}
-                className="col-span-1 border border-teal-400 rounded-xl p-4 mb-4 cursor-pointer"
-              >
-                <div className="flex">
-                  Event Name: <span>{event.eventName}</span>
-                </div>
+        <>
+          <div className="list-of-events">List Of Events In MetaSquare</div>
+          <div className="events-container">
+            {eventDetails.map((event, _i) => {
+              return (
+                <Link
+                  href={`/eventDeets?address=${event.address}`}
+                  key={_i}
+                  className="event-card"
+                >
+                  <div className="event-name">
+                    <div className="flex">
+                      Event Name: <span>{event.eventName}</span>
+                    </div>
 
-                <div className="flex">
-                  Address: {""}
-                  <span className="">
-                    {`${event.address.slice(0, 6)}...${event.address.slice(
-                      -4
-                    )}`}
-                  </span>
-                </div>
-              </Link>
-            );
-          })}
-        </div>
+                    <div className="event-address">
+                      Address: {""}
+                      <span className="text-sm text-gray-500 !important">
+                        {`${event.address.slice(0, 6)}...${event.address.slice(
+                          -4
+                        )}`}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              );
+            })}
+          </div>
+        </>
       )}
+
+      <Footer />
     </div>
   );
 };

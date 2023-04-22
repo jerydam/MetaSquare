@@ -91,19 +91,18 @@ const EventDeets = () => {
   return (
     <div>
       <Navbar />
-      <h1>Event Name are : {evtName}</h1>
-      <h1>Event Admin address: {evtAdmin}</h1>
+      <div className="evt-card">
+        <h1 className="title">Event Name are : {evtName}</h1>
+        <h1 className="address">Event Admin address: {evtAdmin}</h1>
 
-      <form onSubmit={handleSubmit}>
-        <button
-          className="bg-[green] border border-blue-300 text-black rounded-md p-2 hover:bg-light-blue hover:text-blue border-radius mb-5"
-          type="submit"
-        >
-          {regIsLoading || regIsLoadingWaitData
-            ? "Registering For Event..."
-            : "Register For this Event"}
-        </button>
-      </form>
+        <form onSubmit={handleSubmit}>
+          <button className="register-button" type="submit">
+            {regIsLoading || regIsLoadingWaitData
+              ? "Registering For Event..."
+              : "Register For this Event"}
+          </button>
+        </form>
+      </div>
     </div>
   );
 };

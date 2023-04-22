@@ -88,21 +88,21 @@ export default function Event() {
   //===================================================
 
   return (
-    <div className="bg-[#2d0f68]">
+    <div className="bck">
       <Navbar />
 
       <div>
         <div className="flex ml-12">
-          <h1 className="text-xl ">Create Event</h1>
+          <h1 className="createEvt">Create Event</h1>
         </div>
         <div className="flex justify-center items-center">
           <div className="flex justify-center items-center">
-            <form onSubmit={handleSubmit2}>
+            <form onSubmit={handleSubmit2} className="form-container">
               <label className="text-lg ">
                 Registration Id: <br />
               </label>
               <input
-                className="p-2 border border-teal-800 py-3 rounded-md bg-slate-600"
+                className="form-input"
                 type="number"
                 placeholder="Enter event Id"
                 onChange={(e) => setid(e.target.value)}
@@ -112,7 +112,7 @@ export default function Event() {
               <label>Event Fee:</label>
               <br />
               <input
-                className="p-2 border border-orange-400"
+                className="form-input"
                 type="number"
                 placeholder="Enter zero if event is free"
                 onChange={(e) => setEventFee(e.target.value)}
@@ -124,7 +124,7 @@ export default function Event() {
                 Number of Participant:
                 <br />
                 <input
-                  className="p-2 border border-orange-400"
+                  className="form-input"
                   type="number"
                   placeholder="No of participants"
                   onChange={(e) => setNoOfParticipants(e.target.value)}
@@ -138,7 +138,7 @@ export default function Event() {
                 StartTime:
                 <br />
                 <input
-                  className="p-2 border border-orange-400"
+                  className="form-input"
                   type="time"
                   placeholder="Enter time the event commences (HH:mm:ss)"
                   onChange={(e) => {
@@ -156,7 +156,7 @@ export default function Event() {
                 EndTime:
                 <br />
                 <input
-                  className="p-2 border border-orange-400"
+                  className="form-input"
                   type="time"
                   placeholder="Enter time the event commences (HH:mm:ss)"
                   onChange={(e) => {
@@ -174,7 +174,7 @@ export default function Event() {
                 Event Uri:
                 <br />
                 <input
-                  className="p-1 border border-orange-700"
+                  className="form-input"
                   type="text"
                   placeholder="event NFT uri"
                   id="uri"
@@ -188,7 +188,7 @@ export default function Event() {
                 NFT Name:
                 <br />
                 <input
-                  className="p-2 border border-orange-400"
+                  className="form-input"
                   type="text"
                   placeholder="Event NFT name"
                   onChange={(e) => setName(e.target.value)}
@@ -200,7 +200,7 @@ export default function Event() {
                 NFt Symbol:
                 <br />
                 <input
-                  className="p-2 border border-orange-400"
+                  className="form-input"
                   type="text"
                   placeholder="Event NFt sympol"
                   onChange={(e) => setSymbol(e.target.value)}
@@ -208,11 +208,7 @@ export default function Event() {
               </label>
               <br />
 
-              <button
-                onClick={notify}
-                className="bg-[green] border border-blue-300 text-black rounded-md p-2 hover:bg-light-blue hover:text-blue border-radius mb-5"
-                type="submit"
-              >
+              <button onClick={notify} className="button" type="submit">
                 {createEventIsLoading || createWaitIsLoading
                   ? "Creating event..."
                   : "Create Event"}
