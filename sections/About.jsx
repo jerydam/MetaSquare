@@ -39,6 +39,14 @@ const About = () => (
         alt="arrow down"
         className="w-[18px] h-[28px] object-contain mt-[28px]"
       />
+       <a
+        href=""
+        className="font-extrabold text-[24px] leading-[30.24px] text-white"
+      >
+        <Link href="/docs">
+          <button>Learn More</button>
+        </Link>
+      </a>
     </motion.div>
   </section>
 );

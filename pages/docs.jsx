@@ -4,14 +4,14 @@ import { Footer, Navbar } from "../components";
 
 export default function Documentation() {
     return(
-        <div className="bg-[#010633]">
+        <div className="bck">
             <Navbar />
-
-            <div className="m-[80px] ypaddings">
+        
+            <div className="m-[80px] ypaddings bg-white">
             <h1 className="text-5xl font-bold text-center">How to Create an Event</h1>
             </div>
 
-            <div className="m-auto">
+            <div className="bg-white">
                 <ol>
                     <li><span className="text-xl font-semibold ml-5 mb-4">Register the event</span> <br/>
                     All events hosted on the platform are vetted and approved before they are created. This is to
