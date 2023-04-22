@@ -4,7 +4,7 @@ import { Footer, Navbar } from "../components";
 
 export default function Documentation() {
     return(
-        <div className="bg-[#010633]">
+        <div className="bg2">
             <Navbar />
 
             <div className="m-[80px] ypaddings">

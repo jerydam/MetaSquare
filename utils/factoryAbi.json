@@ -130,8 +130,8 @@
         "name": "_no_of_participants",
         "type": "uint256"
       },
-      { "internalType": "uint256", "name": "_regStartTime", "type": "uint256" },
-      { "internalType": "uint256", "name": "_regEndTime", "type": "uint256" },
+      { "internalType": "uint256", "name": "_regStartDate", "type": "uint256" },
+      { "internalType": "uint256", "name": "_regDeadline", "type": "uint256" },
       { "internalType": "string", "name": "_eventUri", "type": "string" },
       { "internalType": "string", "name": "_name", "type": "string" },
       { "internalType": "string", "name": "_symbol", "type": "string" }
