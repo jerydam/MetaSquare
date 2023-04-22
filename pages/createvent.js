@@ -67,23 +67,6 @@ export default function Event() {
     }
   }, [createEventData]);
 
-  // const {
-  //   data: ReturntotalnumberofEvent,
-  //   isLoading: numberOfEventIsLoading,
-  //   isError: numberIsError,
-  // } = useContractRead({
-  //   address: "0x8197Ac59CbC142236bdAb2C91d420A528c592750",
-  //   abi: ticketAbi,
-  //   functionName: "returnTotalNoOfEvents",
-  // });
-
-  // useEffect(() => {
-  //   const evt = toString(ReturntotalnumberofEvent);
-  //   if (evt) {
-  //     console.log(evt);
-  //   }
-  // }, [ReturntotalnumberofEvent]);
-
   const handleSubmit2 = (e) => {
     e.preventDefault();
 
@@ -109,36 +92,24 @@ export default function Event() {
       <Navbar />
 
       <div>
-        {/* <h1 className="font-bold font-weight:900 text-center my-3 justify-center ">
-        Total Number Of Events created: {String(totalNoOfEvents)}
-      </h1> */}
         <div className="flex ml-12">
           <h1 className="text-xl ">Create Event</h1>
         </div>
         <div className="flex justify-center items-center">
-        <div className="flex ml-12">
-          <h1 className="text-xl ">Create Event</h1>
-        </div>
-        <div className="flex justify-center items-center">
-          <form onSubmit={handleSubmit2}>
-            <label className="text-lg ">
-              Registration Id: <br />
-            </label>
-            <label className="text-lg ">
-              Registration Id: <br />
-            </label>
+          <div className="flex justify-center items-center">
+            <form onSubmit={handleSubmit2}>
+              <label className="text-lg ">
+                Registration Id: <br />
+              </label>
               <input
                 className="p-2 border border-teal-800 py-3 rounded-md bg-slate-600"
-                
                 type="number"
                 placeholder="Enter event Id"
                 onChange={(e) => setid(e.target.value)}
               />
 
-            <br />
-            <label>
-              Event Fee:
-            </label>
+              <br />
+              <label>Event Fee:</label>
               <br />
               <input
                 className="p-2 border border-orange-400"
@@ -147,113 +118,110 @@ export default function Event() {
                 onChange={(e) => setEventFee(e.target.value)}
               />
 
-            <br />
-            <br />
-            <label>
-              Number of Participant:
               <br />
-              <input
-                className="p-2 border border-orange-400"
-                type="number"
-                placeholder="No of participants"
-        
-                onChange={(e) => setNoOfParticipants(e.target.value)}
-              />
-            </label>
-
-            <br />
-
-            <br />
-            <label>
-              StartTime:
               <br />
-              <input
-                className="p-2 border border-orange-400"
-                type="time"
-                placeholder="Enter time the event commences (HH:mm:ss)"
-                onChange={(e) => {
-                  const timeString = e.target.value;
-                  const date = new Date(`1970-01-01T${timeString}:00Z`);
-                  const unixTimestamp = Math.floor(date.getTime() / 1000);
-                  console.log(unixTimestamp);
-                  setStartTime(unixTimestamp);
-                }}
-              />
-            </label>
+              <label>
+                Number of Participant:
+                <br />
+                <input
+                  className="p-2 border border-orange-400"
+                  type="number"
+                  placeholder="No of participants"
+                  onChange={(e) => setNoOfParticipants(e.target.value)}
+                />
+              </label>
 
-            <br />
-            <label>
-              EnTime:
               <br />
-              <input
-                className="p-2 border border-orange-400"
-                type="time"
-                placeholder="Enter time the event commences (HH:mm:ss)"
-                onChange={(e) => {
-                  const timeString = e.target.value;
-                  const date = new Date(`1970-01-01T${timeString}:00Z`);
-                  const unixTimestamp = Math.floor(date.getTime() / 1000);
-                  console.log(unixTimestamp);
-                  setEndTime(unixTimestamp);
-                }}
-              />
-            </label>
 
-            <br />
-            <label>
-              Event Uri:
               <br />
-              <input
-                className="p-1 border border-orange-700"
-                type="text"
-                placeholder="event NFT uri"
-                id="uri"
-                onChange={(e) => setEventUri(e.target.value)}
-              />
-            </label>
-            <br />
-            <br />
+              <label>
+                StartTime:
+                <br />
+                <input
+                  className="p-2 border border-orange-400"
+                  type="time"
+                  placeholder="Enter time the event commences (HH:mm:ss)"
+                  onChange={(e) => {
+                    const timeString = e.target.value;
+                    const date = new Date(`1970-01-01T${timeString}:00Z`);
+                    const unixTimestamp = Math.floor(date.getTime() / 1000);
+                    console.log(unixTimestamp);
+                    setStartTime(unixTimestamp);
+                  }}
+                />
+              </label>
 
-            <label>
-              NFT Name:
-              NFT Name:
               <br />
-              <input
-                className="p-2 border border-orange-400"
-                type="text"
-                placeholder="Event NFT name"
-                onChange={(e) => setName(e.target.value)}
-              />
-            </label>
-            <br />
-            <br />
-            <label>
-              NFt Symbol:
-              NFt Symbol:
-              <br />
-              <input
-                className="p-2 border border-orange-400"
-                type="text"
-                placeholder="Event NFt sympol"
-                onChange={(e) => setSymbol(e.target.value)}
-              />
-            </label>
-            <br />
+              <label>
+                EndTime:
+                <br />
+                <input
+                  className="p-2 border border-orange-400"
+                  type="time"
+                  placeholder="Enter time the event commences (HH:mm:ss)"
+                  onChange={(e) => {
+                    const timeString = e.target.value;
+                    const date = new Date(`1970-01-01T${timeString}:00Z`);
+                    const unixTimestamp = Math.floor(date.getTime() / 1000);
+                    console.log(unixTimestamp);
+                    setEndTime(unixTimestamp);
+                  }}
+                />
+              </label>
 
-            <button
-              onClick={notify}
-              className="bg-[green] border border-blue-300 text-black rounded-md p-2 hover:bg-light-blue hover:text-blue border-radius mb-5"
-              type="submit"
-            >
-              {createEventIsLoading || createWaitIsLoading
-                ? "Creating event..."
-                : "Create Event"}
-            </button>
-          </form>
+              <br />
+              <label>
+                Event Uri:
+                <br />
+                <input
+                  className="p-1 border border-orange-700"
+                  type="text"
+                  placeholder="event NFT uri"
+                  id="uri"
+                  onChange={(e) => setEventUri(e.target.value)}
+                />
+              </label>
+              <br />
+              <br />
+
+              <label>
+                NFT Name:
+                <br />
+                <input
+                  className="p-2 border border-orange-400"
+                  type="text"
+                  placeholder="Event NFT name"
+                  onChange={(e) => setName(e.target.value)}
+                />
+              </label>
+              <br />
+              <br />
+              <label>
+                NFt Symbol:
+                <br />
+                <input
+                  className="p-2 border border-orange-400"
+                  type="text"
+                  placeholder="Event NFt sympol"
+                  onChange={(e) => setSymbol(e.target.value)}
+                />
+              </label>
+              <br />
+
+              <button
+                onClick={notify}
+                className="bg-[green] border border-blue-300 text-black rounded-md p-2 hover:bg-light-blue hover:text-blue border-radius mb-5"
+                type="submit"
+              >
+                {createEventIsLoading || createWaitIsLoading
+                  ? "Creating event..."
+                  : "Create Event"}
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-</div>
-   
+
       <Footer />
     </div>
   );

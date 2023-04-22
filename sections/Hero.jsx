@@ -44,12 +44,12 @@ const Hero = () => (
         <a href="#">
           <div className="w-full flex justify-center sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
             <Link href="/register">
-              <button
+              {/* <button
                 className="bg-[#6f71d4] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-semibold mt-4 mr-16 md:mt-8 lg:mt-16 rounded-md py-5 px-8 text-lg lg:text-xl hover: hover:text-blue-200"
                 type="submit"
               >
                 Register Event
-              </button>
+              </button> */}
             </Link>
             <Link href="/createvent">
               <button

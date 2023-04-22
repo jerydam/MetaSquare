@@ -2,8 +2,6 @@
 
 import { motion } from "framer-motion";
 import { TypingText } from "../components";
-import { motion } from 'framer-motion';
-import { TypingText } from '../components';
 import Link from "next/link";
 
 import styles from "../styles";
