@@ -92,7 +92,7 @@ const EventDeets = () => {
     <div>
       <Navbar />
       <div className="evt-card">
-        <h1 className="title">Event Name are : {evtName}</h1>
+        <h1 className="title">Event Name : {evtName}</h1>
         <h1 className="address">Event Admin address: {evtAdmin}</h1>
 
         <form onSubmit={handleSubmit}>
