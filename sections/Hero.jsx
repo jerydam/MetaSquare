@@ -41,16 +41,8 @@ const Hero = () => (
           className="w-3/4 sm:h-[500px] h-[350px] m-auto object-cover rounded-[20px] z-10 relative"
         />
 
-        <a href="#">
+   
           <div className="w-full flex justify-center sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
-            <Link href="/register">
-              {/* <button
-                className="bg-[#6f71d4] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-semibold mt-4 mr-16 md:mt-8 lg:mt-16 rounded-md py-5 px-8 text-lg lg:text-xl hover: hover:text-blue-200"
-                type="submit"
-              >
-                Register Event
-              </button> */}
-            </Link>
             <Link href="/createvent">
               <button
                 className="bg-[#6f71d4] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-semibold mt-4 md:mt-8 lg:mt-16 rounded-md py-5 px-8 text-lg lg:text-xl hover: hover:text-blue-200"
@@ -59,17 +51,18 @@ const Hero = () => (
                 Create Event
               </button>
             </Link>
-
-            <Link href="/contact">
+             <Link href="/contact">
               <button
-                className="bg-[#blue] border border-[#a5fafd] mt-4 md:mt-8 lg:mt-10 rounded-md py-3 px-6 text-lg lg:text-xl hover:bg-[#052C5B] hover:text-white"
+                className="bg-[#6f71d4] bg-gradient-to-r  from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-semibold mt-4 md:mt-8 lg:mt-16 rounded-md py-5 px-8 text-lg lg:text-xl hover: hover:text-blue-200"
                 type="submit"
               >
                 Create ID
               </button>
             </Link>
+                
+          
           </div>
-        </a>
+        
       </motion.div>
     </motion.div>
   </section>

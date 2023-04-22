@@ -92,7 +92,7 @@ export default function Event() {
       <Navbar />
 
       <div>
-        <div className="flex ml-12">
+        <div className="flex  items-center justify-center ">
           <h1 className="createEvt">Create Event</h1>
         </div>
         <div className="flex justify-center items-center">
