@@ -88,6 +88,45 @@ const EventDeets = () => {
     register?.();
   };
 
+  const {
+    data: claimData,
+    isLoading: claimIsLoading,
+    write: claimPOAP,
+  } = useContractWrite({
+    address: eventAddress,
+    abi: childTicket,
+    functionName: "claimAttendanceToken",
+  });
+
+  const { data: claimWaitData, isLoading: claimIsLoadingWaitData } =
+    useWaitForTransaction({
+      hash: claimData?.hash,
+
+      onSuccess(data) {
+        console.log(data);
+        console.log("Claim Successful");
+        alert("SUCCESSFULLY Claimed POAP");
+        // register?.();
+      },
+      onError(error) {
+        console.log(error);
+        console.log("Could Not Register");
+        alert("It seems you didn't attend this event");
+      },
+    });
+
+  useEffect(() => {
+    if (claimData) {
+      console.log(claimData);
+    }
+  }, [claimData]);
+
+  const handleSubmit2 = (e) => {
+    e.preventDefault();
+
+    claimPOAP?.();
+  };
+
   return (
     <div>
       <Navbar />
@@ -100,6 +139,16 @@ const EventDeets = () => {
             {regIsLoading || regIsLoadingWaitData
               ? "Registering For Event..."
               : "Register"}
+          </button>
+        </form>
+
+        <hr></hr>
+
+        <form onSubmit={handleSubmit2}>
+          <button className="register-button" type="submit">
+            {claimIsLoading || claimIsLoadingWaitData
+              ? "Claiming POAP..."
+              : "Claim POAP"}
           </button>
         </form>
       </div>
