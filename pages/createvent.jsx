@@ -13,7 +13,8 @@ import { useState, useEffect } from "react";
 import factoryAbi from "../utils/factoryAbi.json";
 
 export default function Event() {
-  const factoryContract = "0x5A7Ee10F0b543BB6577f7255B15A8319E0a41F97";
+  const factoryContract = "0x19AF8cb9603ab82f146164b6b0a7a30885fF27c8";
+  
 
   //**==========Defining States================== */
   const [id, setid] = useState(null);
@@ -125,7 +126,7 @@ export default function Event() {
                 className="p-2 border border-orange-400"
                 type="number"
                 placeholder="Enter zero if event is free"
-                onChange={(e) => setEventFee(e.target.value)}
+                onChange={(e) => setEventFee((e.target.value * 1e18).toString())}
               />
 
             <br />
@@ -145,22 +146,18 @@ export default function Event() {
 
             <br />
             <label>
-              Registration start time:
+              Registration start date:
               <br />
 
               <input
                 className="p-2 border border-orange-400"
-                type="time"
-                placeholder="Enter time the event commences (HH:mm:ss)"
+                type="datetime-local"
+                placeholder="Enter registration start time"
                 onChange={(e) => {
                   const timeString = e.target.value;
-                  const date = new Date();
-                  const year = date.getFullYear();
-                  const month = date.getMonth() + 1;
-                  const day = date.getDate();
-                  const dateString = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
-                  const dateTimeString = `${dateString}T${timeString}:00`;
-                  const unixTimestamp = Date.parse(dateTimeString) / 1000;
+                  const date = new Date(timeString);
+                  const unixTimestamp = (date.getTime() / 1000).toString();
+                  setEndTime(unixTimestamp);
                   console.log(unixTimestamp);
                 }}
               />
@@ -169,21 +166,17 @@ export default function Event() {
 
             <br />
             <label>
-              EnTime:
+              Registration deadline:
               <br />
               <input
                 className="p-2 border border-orange-400"
-                type="time"
-                placeholder="Enter time the event commences (HH:mm:ss)"
+                type="datetime-local"
+                placeholder="Enter registration deadline"
                 onChange={(e) => {
                   const timeString = e.target.value;
-                  const date = new Date();
-                  const year = date.getFullYear();
-                  const month = date.getMonth() + 1;
-                  const day = date.getDate();
-                  const dateString = `${year}-${month.toString().padStart(2, '0')}-${day.toString().padStart(2, '0')}`;
-                  const dateTimeString = `${dateString}T${timeString}:00`;
-                  const unixTimestamp = Date.parse(dateTimeString) / 1000;
+                  const date = new Date(timeString);
+                  const unixTimestamp = (date.getTime() / 1000).toString();
+                  setEndTime(unixTimestamp);
                   console.log(unixTimestamp);
                 }}
               />
