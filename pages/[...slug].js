@@ -99,7 +99,7 @@ const EventDeets = () => {
           <button className="register-button" type="submit">
             {regIsLoading || regIsLoadingWaitData
               ? "Registering For Event..."
-              : "Register For this Event"}
+              : "Register"}
           </button>
         </form>
       </div>
