@@ -93,7 +93,7 @@ export default function Event() {
 
       <div>
         <div className="flex  items-center justify-center ">
-          <h1 className="createEvt">Create Event</h1>
+          <h1 className="createEvt text-lg">Create Event</h1>
         </div>
         <div className="flex justify-center items-center">
           <div className="flex justify-center items-center">

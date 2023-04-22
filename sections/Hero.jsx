@@ -41,24 +41,31 @@ const Hero = () => (
           className="w-3/4 sm:h-[500px] h-[350px] m-auto object-cover rounded-[20px] z-10 relative"
         />
 
-        <div className="w-full flex justify-center sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
-          <Link href="/createvent">
-            <button
-              className="bg-[#6f71d4] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-semibold mt-4 md:mt-8 lg:mt-16 rounded-md py-5 px-8 text-lg lg:text-xl hover: hover:text-blue-200"
-              type="submit"
-            >
-              Create Event
-            </button>
-          </Link>
-          <Link href="/contact">
-            <button
-              className="bg-[#6f71d4] bg-gradient-to-r  from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-semibold mt-4 md:mt-8 lg:mt-16 rounded-md py-5 px-8 text-lg lg:text-xl hover: hover:text-blue-200"
-              type="submit"
-            >
-              Request ID
-            </button>
-          </Link>
-        </div>
+   
+          <div className="w-full flex justify-center sm:-mt-[70px] -mt-[50px] pr-[40px] relative z-10">
+            <div className="mr-3">
+            <Link href="/createvent">
+              <button
+                className="bg-[#6f71d4] bg-gradient-to-r from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-semibold mt-4 md:mt-8 lg:mt-16 rounded-md py-5 px-8 text-lg lg:text-xl hover: hover:text-blue-200"
+                type="submit"
+              >
+                Create Event
+              </button>
+            </Link>
+            </div>
+            <div className="ml-3">
+             <Link  href="/contact">
+              <button
+                className="bg-[#6f71d4] bg-gradient-to-r  from-indigo-500 from-10% via-sky-500 via-30% to-emerald-500 to-90% text-white font-semibold mt-4 md:mt-8 lg:mt-16 rounded-md py-5 px-8 text-lg lg:text-xl hover: hover:text-blue-200"
+                type="submit"
+              >
+                Create ID
+              </button>
+            </Link>
+             </div>   
+          
+          </div>
+        
       </motion.div>
     </motion.div>
   </section>

@@ -26,9 +26,6 @@ const Navbar = () => (
         href="/"
         className="font-extrabold text-[24px] leading-[30.24px] text-white"
       >
-        {/* <button>
-        Events
-      </button> */}
       </a>
       <a
         href=""
