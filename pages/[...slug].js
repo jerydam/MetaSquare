@@ -1,22 +1,20 @@
-import Navbar from "../components/Navbar";
-import { ethers } from "ethers";
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from 'react';
+
 import {
-  erc20ABI,
   useAccount,
   useContractRead,
   useContractWrite,
-  usePrepareContractWrite,
   useWaitForTransaction,
-} from "wagmi";
+} from 'wagmi';
 
-import childTicket from "../utils/childTicket.json";
-import { useRouter } from "next/router";
+import { useRouter } from 'next/router';
+import Navbar from '../components/Navbar';
+import childTicket from '../utils/childTicket.json';
 
 const EventDeets = () => {
   const router = useRouter();
   const eventAddress = router.query.address?.toString();
-  const { address } = useAccount();
+  const {address} = useAccount();
 
   const {
     data: evtAdmin,
@@ -25,7 +23,7 @@ const EventDeets = () => {
   } = useContractRead({
     address: eventAddress,
     abi: childTicket,
-    functionName: "eventAdmin",
+    functionName: 'eventAdmin',
   });
 
   useEffect(() => {
@@ -41,7 +39,7 @@ const EventDeets = () => {
   } = useContractRead({
     address: eventAddress,
     abi: childTicket,
-    functionName: "name",
+    functionName: 'name',
   });
 
   useEffect(() => {
@@ -57,7 +55,7 @@ const EventDeets = () => {
   } = useContractWrite({
     address: eventAddress,
     abi: childTicket,
-    functionName: "register",
+    functionName: 'register',
   });
 
   const { data: regWaitData, isLoading: regIsLoadingWaitData } =
@@ -66,13 +64,13 @@ const EventDeets = () => {
 
       onSuccess(data) {
         console.log(data);
-        console.log("registration SUCCESSFUL");
-        alert("SUCCESSFULLY REGISTERED");
+        console.log('registration SUCCESSFUL');
+        alert('SUCCESSFULLY REGISTERED');
         // register?.();
       },
       onError(error) {
         console.log(error);
-        console.log("Could Not Register");
+        console.log('Could Not Register');
       },
     });
 
@@ -95,7 +93,7 @@ const EventDeets = () => {
   } = useContractWrite({
     address: eventAddress,
     abi: childTicket,
-    functionName: "claimAttendanceToken",
+    functionName: 'claimAttendanceToken',
   });
 
   const { data: claimWaitData, isLoading: claimIsLoadingWaitData } =
@@ -104,13 +102,13 @@ const EventDeets = () => {
 
       onSuccess(data) {
         console.log(data);
-        console.log("Claim Successful");
-        alert("SUCCESSFULLY Claimed POAP");
+        console.log('Claim Successful');
+        alert('SUCCESSFULLY Claimed POAP');
         // register?.();
       },
       onError(error) {
         console.log(error);
-        console.log("Could Not Register");
+        console.log('Could Not Register');
         alert("It seems you didn't attend this event");
       },
     });
@@ -137,18 +135,16 @@ const EventDeets = () => {
         <form onSubmit={handleSubmit}>
           <button className="register-button" type="submit">
             {regIsLoading || regIsLoadingWaitData
-              ? "Registering For Event..."
-              : "Register"}
+              ? 'Registering For Event...'
+              : 'Register'}
           </button>
         </form>
-
-        <hr></hr>
 
         <form onSubmit={handleSubmit2}>
           <button className="register-button" type="submit">
             {claimIsLoading || claimIsLoadingWaitData
-              ? "Claiming POAP..."
-              : "Claim POAP"}
+              ? 'Claiming POAP...'
+              : 'Claim POAP'}
           </button>
         </form>
       </div>

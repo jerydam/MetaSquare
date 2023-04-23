@@ -1,9 +1,8 @@
-import { Footer } from "../components";
-import Navbar from "../components/Navbar";
+import { Footer } from '../components';
+import Navbar from '../components/Navbar';
 
 const contact = () => {
-  return (
-    <div className="bck">
+  <div className="bck">
       <Navbar />
       <div className="container">
         <form
@@ -33,7 +32,6 @@ const contact = () => {
       </div>
       <Footer />
     </div>
-  );
 };
 
 export default contact;

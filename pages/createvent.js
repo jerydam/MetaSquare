@@ -1,33 +1,29 @@
-import React from "react";
-import { Footer, Navbar } from "../components";
+import React from 'react';
+import { useState, useEffect } from 'react';
 import {
-  erc20ABI,
-  useAccount,
-  useContractRead,
   useContractWrite,
   usePrepareContractWrite,
   useWaitForTransaction,
-} from "wagmi";
-import { useState, useEffect } from "react";
-import factoryAbi from "../utils/factoryAbi.json";
+} from 'wagmi';
+import { Footer, Navbar } from '../components';
+import factoryAbi from '../utils/factoryAbi.json';
 
 export default function Event() {
-  const factoryContract = "0x5A7Ee10F0b543BB6577f7255B15A8319E0a41F97";
+  const factoryContract = '0x5A7Ee10F0b543BB6577f7255B15A8319E0a41F97';
 
-  //**==========Defining States================== */
   const [id, setid] = useState(null);
   const [eventFee, setEventFee] = useState(null);
   const [noOfParticipants, setNoOfParticipants] = useState(null);
   const [startTime, setStartTime] = useState(null);
   const [endTime, setEndTime] = useState(null);
-  const [eventUri, setEventUri] = useState("");
-  const [name, setName] = useState("");
-  const [symbol, setSymbol] = useState("");
+  const [eventUri, setEventUri] = useState('');
+  const [name, setName] = useState('');
+  const [symbol, setSymbol] = useState('');
 
   const { config: config1 } = usePrepareContractWrite({
     address: factoryContract,
     abi: factoryAbi,
-    functionName: "createEvent",
+    functionName: 'createEvent',
     args: [
       id,
       eventFee,
@@ -46,17 +42,16 @@ export default function Event() {
     write: create,
   } = useContractWrite(config1);
 
-  const { data: createWaitData, isLoading: createWaitIsLoading } =
-    useWaitForTransaction({
+  const { data: createWaitData, isLoading: createWaitIsLoading }=useWaitForTransaction({
       data: createEventData?.hash,
 
       onSuccess(data) {
-        console.log("SUCCESSFULLY REGISTERED: ", data);
+        console.log('SUCCESSFULLY REGISTERED: ', data);
         evSuccessCreated();
       },
 
       onError(error) {
-        console.log("Encountered error: ", error);
+        console.log('Encountered error: ', error);
       },
     });
 
@@ -73,21 +68,16 @@ export default function Event() {
     create?.();
   };
 
-  const notify = () => toast("Wow so easy !");
-
+  
   const evSuccessCreated = () =>
-    toast("Successfully Created Event", {
+    toast('Successfully Created Event', {
       hideProgressBar: false,
       autoClose: 2000,
-      type: "Success",
-      position: "bottom-right",
+      type: 'Succes',
+      position: 'bottom-right',
     });
 
-  //===================================================
-  //==================================================
-  //===================================================
-
-  return (
+   return (
     <div className="bck">
       <Navbar />
 
@@ -210,8 +200,8 @@ export default function Event() {
 
               <button onClick={notify} className="button" type="submit">
                 {createEventIsLoading || createWaitIsLoading
-                  ? "Creating event..."
-                  : "Create Event"}
+                  ? 'Creating event...'
+                  : 'Create Event'}
               </button>
             </form>
           </div>
