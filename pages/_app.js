@@ -1,11 +1,11 @@
-import Head from "next/head";
-import "../styles/globals.css";
-import "@rainbow-me/rainbowkit/styles.css";
-import { getDefaultWallets, RainbowKitProvider } from "@rainbow-me/rainbowkit";
-import { configureChains, createClient, WagmiConfig } from "wagmi";
-import { goerli, mainnet, polygonMumbai } from "wagmi/chains";
-import { jsonRpcProvider } from "wagmi/providers/jsonRpc";
-import "../public/styles.css";
+import Head from 'next/head';
+import '../styles/globals.css';
+import '@rainbow-me/rainbowkit/styles.css';
+import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
+import { configureChains, createClient, WagmiConfig } from 'wagmi';
+import { goerli, mainnet, polygonMumbai } from 'wagmi/chains';
+import { jsonRpcProvider } from 'wagmi/providers/jsonRpc';
+import '../public/styles.css';
 
 const { chains, provider } = configureChains(
   [goerli, mainnet, polygonMumbai],
@@ -13,15 +13,15 @@ const { chains, provider } = configureChains(
   [
     jsonRpcProvider({
       rpc: () => ({
-        http: "https://polygon-mumbai.g.alchemy.com/v2/OnD5ir1kRjdZ2sZZAtBOK_-u6DF1Q2nd",
+        http: 'https://polygon-mumbai.g.alchemy.com/v2/OnD5ir1kRjdZ2sZZAtBOK_-u6DF1Q2nd',
         WebSocket:
-          "wss://polygon-mumbai.g.alchemy.com/v2/OnD5ir1kRjdZ2sZZAtBOK_-u6DF1Q2nd",
+          'wss://polygon-mumbai.g.alchemy.com/v2/OnD5ir1kRjdZ2sZZAtBOK_-u6DF1Q2nd',
       }),
     }),
-  ]
+  ],
 );
 const { connectors } = getDefaultWallets({
-  appName: "My RainbowKit App",
+  appName: 'My RainbowKit App',
   chains,
 });
 const wagmiClient = createClient({
