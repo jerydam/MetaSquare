@@ -23,11 +23,6 @@ const Navbar = () => (
         METASQUARE
       </a>
       <a
-        href="/"
-        className="font-extrabold text-[24px] leading-[30.24px] text-white"
-      >
-      </a>
-      <a
         href=""
         className="font-extrabold text-[24px] leading-[30.24px] text-white"
       >
