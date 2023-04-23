@@ -1,6 +1,6 @@
 /* eslint-disable */
-import React from 'react';
-import { Footer, Navbar } from '../components';
+import React from "react";
+import { Footer, Navbar } from "../components";
 
 export default function Documentation() {
     return(
@@ -11,14 +11,20 @@ export default function Documentation() {
             <h1 className='text-5xl font-bold text-center'>How to Create an Event</h1>
             </div>
 
-            <div className='bg-white'>
-                <ol>
-                    <li><span className='text-xl font-semibold ml-5 mb-4'>Register the event</span> <br/>
-                    All events hosted on the platform are vetted and approved before they are created. This is to
-                    maintain oversight, and not run into situations where inappropriate events are hosted on the platform.
-                    To register an event, simply click on the 'Register event' button on the homepage and fill in the short form, the 
-                    wallet address of the event organizer is required.
-                    </li>
+    <div className="bg-white">
+      <ol>
+        <li>
+          <span className="text-xl font-semibold ml-5 mb-4">
+            Register the event
+          </span>{" "}
+          <br />
+          All events hosted on the platform are vetted and approved before they
+          are created. This is to maintain oversight, and not run into
+          situations where inappropriate events are hosted on the platform. To
+          register an event, simply click on the "Register event" button on the
+          homepage and fill in the short form, the wallet address of the event
+          organizer is required.
+        </li>
 
                     <li><span className='text-xl m-11 font-semibold'>Create the Event</span> <br />
                     After an event is registered, an ID is generated for the event. This ID is required to create an event

@@ -1,4 +1,3 @@
-/* eslint-disable */
 import Link from "next/link";
 import { useContractRead } from "wagmi";
 import React, { useEffect, useState } from "react";

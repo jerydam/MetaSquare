@@ -1,12 +1,11 @@
-/* eslint-disable */
-import { Footer } from '../components';
-import Navbar from '../components/Navbar';
+import { Footer } from "../components";
+import Navbar from "../components/Navbar";
 
 const contact = () => {
+  return (
     <div className="bck">
-     
+      <Navbar />
       <div className="container">
-         <Navbar />
         <form
           className="form"
           action="https://formspree.io/f/mlekabld"
@@ -22,7 +21,7 @@ const contact = () => {
           <label className="label">
             Message:
             <br />
-            <textarea className="textarea" name='message'></textarea>
+            <textarea className="textarea" name="message"></textarea>
           </label>
           <br />
           <br />
@@ -34,7 +33,7 @@ const contact = () => {
       </div>
       <Footer />
     </div>
-  ;
+  );
 };
 
 export default contact;

@@ -24,13 +24,13 @@ const About = () => (
         className="mt-[8px] font-normal sm:text-[32px] text-[20px] text-center text-secondary-white"
       >
         Welcome to <span className="font-extrabold text-white">MetaSquare</span>
-        a decentralized event ticketing platform, where you can{" "}
-        <span className="font-extrabold text-white">Buy</span> and{" "}
-        <span className="font-extrabold text-white">Sell</span> tickets to your
-        favorite events without intermediaries or centralized authorities. At
-        our platform, we believe that event ticketing should be transparent,
-        secure, and accessible to everyone, regardless of their location or
-        financial status.{" "}
+        , a decentralized event ticketing platform, where you can{" "}
+        <span className="font-extrabold text-white">Create</span> and{" "}
+        <span className="font-extrabold text-white">Sell</span> Event tickets to
+        your favorite events without intermediaries or centralized authorities.
+        We believe that event ticketing should be transparent, secure, and
+        accessible to everyone, regardless of their location or financial
+        status.{" "}
       </motion.p>
 
       <motion.img

@@ -1,8 +1,7 @@
 /* eslint-disable */
+"use client";
 
 import { motion } from "framer-motion";
-import Link from "next/link";
-
 import styles from "../styles";
 import { navVariants } from "../utils/motion";
 import Connect from "./Connect";
