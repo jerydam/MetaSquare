@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Head from "next/head";
 import "../styles/globals.css";
 import "@rainbow-me/rainbowkit/styles.css";
