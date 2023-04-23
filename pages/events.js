@@ -7,8 +7,6 @@ import childTicket from '../utils/childTicket.json';
 import { Footer, Navbar } from '../components';
 
 // import Navbar from '../components/Navbar';
-// import { Footer } from '../components';
-
 const events = () => {
   const [eventDetailsLoading, setEventDetailsLoading] = useState(false);
   const CONTRACT = '0x5A7Ee10F0b543BB6577f7255B15A8319E0a41F97';

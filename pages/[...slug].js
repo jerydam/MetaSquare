@@ -11,6 +11,7 @@ import { useRouter } from 'next/router';
 import Navbar from '../components/Navbar';
 import childTicket from '../utils/childTicket.json';
 
+
 const EventDeets = () => {
   const router = useRouter();
   const eventAddress = router.query.address?.toString();

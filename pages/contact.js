@@ -1,6 +1,7 @@
 import { Footer } from '../components';
 import Navbar from '../components/Navbar';
 
+
 const contact = () => {
   <div className="bck">
       <Navbar />
