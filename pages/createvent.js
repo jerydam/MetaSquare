@@ -73,15 +73,15 @@ export default function Event() {
     create?.();
   };
 
-  const notify = () => toast("Wow so easy !");
+  // const notify = () => toast("Wow so easy !");
 
-  const evSuccessCreated = () =>
-    toast("Successfully Created Event", {
-      hideProgressBar: false,
-      autoClose: 2000,
-      type: "Success",
-      position: "bottom-right",
-    });
+  // const evSuccessCreated = () =>
+  //   toast("Successfully Created Event", {
+  //     hideProgressBar: false,
+  //     autoClose: 2000,
+  //     type: "Success",
+  //     position: "bottom-right",
+  //   });
 
   //===================================================
   //==================================================
@@ -115,7 +115,8 @@ export default function Event() {
                 className="form-input"
                 type="number"
                 placeholder="Enter zero if event is free"
-                onChange={(e) => setEventFee(e.target.value)}
+                onChange={(e) => setEventFee((e.target.value * 1e18).toString())}
+                // onChange={(e) => setEventFee(e.target.value)}
               />
 
               <br />
@@ -137,7 +138,7 @@ export default function Event() {
               <label>
                 StartTime:
                 <br />
-                <input
+                {/* <input
                   className="form-input"
                   type="time"
                   placeholder="Enter time the event commences (HH:mm:ss)"
@@ -148,14 +149,27 @@ export default function Event() {
                     console.log(unixTimestamp);
                     setStartTime(unixTimestamp);
                   }}
-                />
+                /> */}
+
+              <input
+                className="p-2 border border-orange-400"
+                type="datetime-local"
+                placeholder="Enter registration start time"
+                onChange={(e) => {
+                  const timeString = e.target.value;
+                  const date = new Date(timeString);
+                  const unixTimestamp = (date.getTime() / 1000).toString();
+                  setEndTime(unixTimestamp);
+                  console.log(unixTimestamp);
+                }}
+              />
               </label>
 
               <br />
               <label>
                 EndTime:
                 <br />
-                <input
+                {/* <input
                   className="form-input"
                   type="time"
                   placeholder="Enter time the event commences (HH:mm:ss)"
@@ -166,7 +180,20 @@ export default function Event() {
                     console.log(unixTimestamp);
                     setEndTime(unixTimestamp);
                   }}
-                />
+                /> */}
+
+              <input
+                className="p-2 border border-orange-400"
+                type="datetime-local"
+                placeholder="Enter registration start time"
+                onChange={(e) => {
+                  const timeString = e.target.value;
+                  const date = new Date(timeString);
+                  const unixTimestamp = (date.getTime() / 1000).toString();
+                  setEndTime(unixTimestamp);
+                  console.log(unixTimestamp);
+                }}
+              />
               </label>
 
               <br />
@@ -208,7 +235,7 @@ export default function Event() {
               </label>
               <br />
 
-              <button onClick={notify} className="button" type="submit">
+              <button className="button" type="submit">
                 {createEventIsLoading || createWaitIsLoading
                   ? "Creating event..."
                   : "Create Event"}
