@@ -1,3 +1,4 @@
+/* eslint-disable */
 import { Footer } from "../components";
 import Navbar from "../components/Navbar";
 

@@ -25,17 +25,17 @@ const Navbar = () => (
         href=""
         className="font-extrabold text-[24px] leading-[30.24px] text-white"
       >
-        <Link href="https://dads-organization.gitbook.io/untitled/">
+        <a href="https://dads-organization.gitbook.io/untitled/">
           <button>Events</button>
-        </Link>
+        </a>
       </a>
        <a
         href=""
         className="font-extrabold text-[24px] leading-[30.24px] text-white"
       >
-        <Link href="/events">
+        <a href="/events">
           <button>Docs</button>
-        </Link>
+        </a>
       </a>
 
       <Connect />
