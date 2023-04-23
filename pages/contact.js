@@ -3,10 +3,11 @@ import { Footer } from '../components';
 import Navbar from '../components/Navbar';
 
 const contact = () => {
-  <div className="bck">
-  <Navbar />
-    <div className="container">
-      <form
+    <div className="bck">
+     
+      <div className="container">
+         <Navbar />
+        <form
           className="form"
           action="https://formspree.io/f/mlekabld"
           method="POST"
@@ -20,8 +21,8 @@ const contact = () => {
           <br />
           <label className="label">
             Message:
-            <br/>
-            <textarea className="textarea" name="message"/>
+            <br />
+            <textarea className="textarea" name='message'></textarea>
           </label>
           <br />
           <br />
@@ -29,11 +30,11 @@ const contact = () => {
           <button className="button" type="submit">
             Send
           </button>
-      </form>
+        </form>
+      </div>
+      <Footer />
     </div>
-  <Footer />
-  </div>;
-
+  ;
 };
 
 export default contact;

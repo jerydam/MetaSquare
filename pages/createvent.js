@@ -1,5 +1,6 @@
 /* eslint-disable */
-import { useState, React, useEffect } from 'react';
+import React from 'react';
+import { useState, useEffect } from 'react';
 import { Footer, Navbar } from '../components';
 import {
   useContractWrite,

@@ -1,6 +1,8 @@
 /* eslint-disable */
-import React, { useEffect } from 'react';
+import React, { useEffect } from "react";
 
+import { useRouter } from 'next/router';
+import Navbar from '../components/Navbar';
 import {
   useAccount,
   useContractRead,
@@ -8,15 +10,11 @@ import {
   useWaitForTransaction,
 } from 'wagmi';
 
-import { useRouter } from 'next/router';
-import Navbar from '../components/Navbar';
 import childTicket from '../utils/childTicket.json';
-
 const EventDeets = () => {
   const router = useRouter();
   const eventAddress = router.query.address?.toString();
-  /* eslint-disable no-unused-vars */
-  const { address } = useAccount();
+  const {} = useAccount();
 
   const {
     data: evtAdmin,
@@ -60,20 +58,21 @@ const EventDeets = () => {
     functionName: 'register',
   });
 
-  const { data: regWaitData, isLoading: regIsLoadingWaitData } = useWaitForTransaction({
-    hash: regData?.hash,
+  const { data: regWaitData, isLoading: regIsLoadingWaitData } =
+    useWaitForTransaction({
+      hash: regData?.hash,
 
-    onSuccess(data) {
-      console.log(data);
-      console.log('registration SUCCESSFUL');
-      alert('SUCCESSFULLY REGISTERED');
-      // register?.();
-    },
-    onError(error) {
-      console.log(error);
-      console.log('Could Not Register');
-    },
-  });
+      onSuccess(data) {
+        console.log(data);
+        console.log('registration SUCCESSFUL');
+        alert('SUCCESSFULLY REGISTERED');
+        // register?.();
+      },
+      onError(error) {
+        console.log(error);
+        console.log('Could Not Register');
+      },
+    });
 
   useEffect(() => {
     if (regData) {
@@ -96,22 +95,23 @@ const EventDeets = () => {
     abi: childTicket,
     functionName: 'claimAttendanceToken',
   });
-  /* eslint-disable no-unused-vars */
-  const { data: claimWaitData, isLoading: claimIsLoadingWaitData } = useWaitForTransaction({
-    hash: claimData?.hash,
 
-    onSuccess(data) {
-      console.log(data);
-      console.log('Claim Successful');
-      alert('SUCCESSFULLY Claimed POAP');
-      // register?.();
-    },
-    onError(error) {
-      console.log(error);
-      console.log('Could Not Register');
-      alert("It seems you didn't attend this event");
-    },
-  });
+  const { data: claimWaitData, isLoading: claimIsLoadingWaitData } =
+    useWaitForTransaction({
+      hash: claimData?.hash,
+
+      onSuccess(data) {
+        console.log(data);
+        console.log('Claim Successful');
+        alert('SUCCESSFULLY Claimed POAP');
+        // register?.();
+      },
+      onError(error) {
+        console.log(error);
+        console.log('Could Not Register');
+        alert("It seems you didn't attend this event");
+      },
+    });
 
   useEffect(() => {
     if (claimData) {
@@ -128,20 +128,22 @@ const EventDeets = () => {
   return (
     <div>
       <Navbar />
-      <div className="evt-card">
-        <h1 className="title">Event Name : {evtName}</h1>
-        <h1 className="address">Event Admin address: {evtAdmin}</h1>
+      <div className='evt-card'>
+        <h1 className='title'>Event Name : {evtName}</h1>
+        <h1 className='address'>Event Admin address: {evtAdmin}</h1>
 
         <form onSubmit={handleSubmit}>
-          <button className="register-button" type="submit">
+          <button className='register-button' type='submit'>
             {regIsLoading || regIsLoadingWaitData
               ? 'Registering For Event...'
               : 'Register'}
           </button>
         </form>
 
+        <hr></hr>
+
         <form onSubmit={handleSubmit2}>
-          <button className="register-button" type="submit">
+          <button className='register-button' type='submit'>
             {claimIsLoading || claimIsLoadingWaitData
               ? 'Claiming POAP...'
               : 'Claim POAP'}
