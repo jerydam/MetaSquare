@@ -1,15 +1,17 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
+/* eslint-disable */
+import { useState, React, useEffect } from 'react';
+import { Footer, Navbar } from '../components';
 import {
   useContractWrite,
   usePrepareContractWrite,
   useWaitForTransaction,
 } from 'wagmi';
-import { Footer, Navbar } from '../components';
 import factoryAbi from '../utils/factoryAbi.json';
 
 export default function Event() {
   const factoryContract = '0x5A7Ee10F0b543BB6577f7255B15A8319E0a41F97';
+
+  //**==========Defining States================== */
 
   const [id, setid] = useState(null);
   const [eventFee, setEventFee] = useState(null);
@@ -42,7 +44,8 @@ export default function Event() {
     write: create,
   } = useContractWrite(config1);
 
-  const { data: createWaitData, isLoading: createWaitIsLoading }=useWaitForTransaction({
+  const { data: createWaitData, isLoading: createWaitIsLoading } =
+    useWaitForTransaction({
       data: createEventData?.hash,
 
       onSuccess(data) {
@@ -68,7 +71,8 @@ export default function Event() {
     create?.();
   };
 
-  
+  const notify = () => toast('Wow so easy !');
+
   const evSuccessCreated = () =>
     toast('Successfully Created Event', {
       hideProgressBar: false,
@@ -77,7 +81,13 @@ export default function Event() {
       position: 'bottom-right',
     });
 
-   return (
+  //===================================================
+
+  //==================================================
+
+  //===================================================
+
+  return (
     <div className="bck">
       <Navbar />
 

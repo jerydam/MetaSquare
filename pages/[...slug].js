@@ -1,3 +1,4 @@
+/* eslint-disable */
 import React, { useEffect } from 'react';
 
 import {
@@ -11,11 +12,11 @@ import { useRouter } from 'next/router';
 import Navbar from '../components/Navbar';
 import childTicket from '../utils/childTicket.json';
 
-
 const EventDeets = () => {
   const router = useRouter();
   const eventAddress = router.query.address?.toString();
-  const {address} = useAccount();
+  /* eslint-disable no-unused-vars */
+  const { address } = useAccount();
 
   const {
     data: evtAdmin,
@@ -59,21 +60,20 @@ const EventDeets = () => {
     functionName: 'register',
   });
 
-  const { data: regWaitData, isLoading: regIsLoadingWaitData } =
-    useWaitForTransaction({
-      hash: regData?.hash,
+  const { data: regWaitData, isLoading: regIsLoadingWaitData } = useWaitForTransaction({
+    hash: regData?.hash,
 
-      onSuccess(data) {
-        console.log(data);
-        console.log('registration SUCCESSFUL');
-        alert('SUCCESSFULLY REGISTERED');
-        // register?.();
-      },
-      onError(error) {
-        console.log(error);
-        console.log('Could Not Register');
-      },
-    });
+    onSuccess(data) {
+      console.log(data);
+      console.log('registration SUCCESSFUL');
+      alert('SUCCESSFULLY REGISTERED');
+      // register?.();
+    },
+    onError(error) {
+      console.log(error);
+      console.log('Could Not Register');
+    },
+  });
 
   useEffect(() => {
     if (regData) {
@@ -96,23 +96,22 @@ const EventDeets = () => {
     abi: childTicket,
     functionName: 'claimAttendanceToken',
   });
+  /* eslint-disable no-unused-vars */
+  const { data: claimWaitData, isLoading: claimIsLoadingWaitData } = useWaitForTransaction({
+    hash: claimData?.hash,
 
-  const { data: claimWaitData, isLoading: claimIsLoadingWaitData } =
-    useWaitForTransaction({
-      hash: claimData?.hash,
-
-      onSuccess(data) {
-        console.log(data);
-        console.log('Claim Successful');
-        alert('SUCCESSFULLY Claimed POAP');
-        // register?.();
-      },
-      onError(error) {
-        console.log(error);
-        console.log('Could Not Register');
-        alert("It seems you didn't attend this event");
-      },
-    });
+    onSuccess(data) {
+      console.log(data);
+      console.log('Claim Successful');
+      alert('SUCCESSFULLY Claimed POAP');
+      // register?.();
+    },
+    onError(error) {
+      console.log(error);
+      console.log('Could Not Register');
+      alert("It seems you didn't attend this event");
+    },
+  });
 
   useEffect(() => {
     if (claimData) {

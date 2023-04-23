@@ -1,7 +1,10 @@
-import React from 'react'
+/* eslint-disable */
+import React from 'react';
 import { Footer, Navbar } from '../components';
 
 export default function Documentation() {
+
+
     <div className="bck">
         <Navbar />
         
@@ -22,6 +25,7 @@ export default function Documentation() {
                     After an event is registered, an ID is generated for the event. This ID is required to create an event
                     to enable us track the event efficiently. The person that is authorized to register the event will be ONLY 
                     the wallet address passed in during the event registration. 
+
                     An event NFT, which serves as the ticket to the event, is created together with the event, hence the event organizer
                     will need to set the NFT name, symbol and Uri. Uri are a unique sequence of alphanumeric strings that connects a token to its metadata
                     onchain. If you need assistance to create the Uri, kindly contact us: hello@metasquare.io

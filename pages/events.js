@@ -1,3 +1,4 @@
+/* eslint-disable */
 import Link from 'next/link';
 import { useContractRead } from 'wagmi';
 import React, { useEffect, useState } from 'react';
@@ -6,7 +7,7 @@ import factoryAbi from '../utils/factoryAbi.json';
 import childTicket from '../utils/childTicket.json';
 import { Footer, Navbar } from '../components';
 
-// import Navbar from '../components/Navbar';
+/* eslint-disable no-shadow,no-plusplus */
 const events = () => {
   const [eventDetailsLoading, setEventDetailsLoading] = useState(false);
   const CONTRACT = '0x5A7Ee10F0b543BB6577f7255B15A8319E0a41F97';
@@ -23,6 +24,7 @@ const events = () => {
     const { ethereum } = window;
     setEventDetailsLoading(true);
 
+/* eslint-disable prefer-const */
     try {
       if (ethereum) {
         const eventDetailsArray = [];
@@ -30,14 +32,15 @@ const events = () => {
           let address = events[i];
 
           const provider = new ethers.providers.JsonRpcProvider(
-            'https://polygon-mumbai.g.alchemy.com/v2/OnD5ir1kRjdZ2sZZAtBOK_-u6DF1Q2nd'
+            'https://polygon-mumbai.g.alchemy.com/v2/OnD5ir1kRjdZ2sZZAtBOK_-u6DF1Q2nd',
           );
 
           const eventContract = new ethers.Contract(
             address,
             childTicket,
-            provider
+            provider,
           );
+/* eslint-disable no-await-in-loop */
 
           const eventName = await eventContract.name();
 
@@ -68,30 +71,32 @@ const events = () => {
         <div className="loading-message">The Page Is Loading ....</div>
       ) : (
         <>
+        /* eslint-disable array-callback-return */
+
           <div className="list-of-events">List Of Events In MetaSquare</div>
           <div className="events-container">
             {eventDetails.map((event, _i) => {
               <Link
-                  href={`/eventDeets?address=${event.address}`}
-                  key={_i}
-                  className="event-card"
-                >
-                  <div className="event-name">
-                    <div className="flex">
+                href={`/eventDeets?address=${event.address}`}
+                key={_i}
+                className="event-card"
+              >
+              <div className="event-name">
+                  <div className="flex">
                       Event Name: <span>{event.eventName}</span>
-                    </div>
+                  </div>
 
-                    <div className="event-address">
+                  <div className="event-address">
                       Address: ''
                       <span className="text-sm text-gray-500 !important">
                         {`${event.address.slice(0, 6)}...${event.address.slice(
-                          -4
+                          -4,
                         )}`},
                       </span>
-                    </div>
                   </div>
-                </Link>
-              ;
+              </div>
+              </Link>;
+              
             })}
           </div>
         </>
@@ -99,7 +104,7 @@ const events = () => {
 
       <Footer />
     </div>
-  )
+  );
 };
 
 export default events;
