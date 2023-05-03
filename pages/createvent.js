@@ -14,6 +14,7 @@ export default function Event() {
 
   //**==========Defining States============ */
    //**==========Defining States============ */
+   
 
   const [id, setid] = useState(null);
   const [eventFee, setEventFee] = useState(null);
@@ -101,7 +102,7 @@ export default function Event() {
           <div className="flex justify-center items-center">
             <form onSubmit={handleSubmit2} className="form-container">
               <label className="text-lg ">
-                Registration Id: <br />
+                Registration Id: <br /><br />
               </label>
               <input
                 className="form-input"
