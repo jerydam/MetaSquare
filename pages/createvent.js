@@ -12,7 +12,9 @@ import factoryAbi from '../utils/factoryAbi.json';
 export default function Event() {
   const factoryContract = '0x5A7Ee10F0b543BB6577f7255B15A8319E0a41F97';
 
-  //**==========Defining States================== */
+  //**==========Defining States============ */
+   //**==========Defining States============ */
+   
 
   const [id, setid] = useState(null);
   const [eventFee, setEventFee] = useState(null);
@@ -100,7 +102,7 @@ export default function Event() {
           <div className="flex justify-center items-center">
             <form onSubmit={handleSubmit2} className="form-container">
               <label className="text-lg ">
-                Registration Id: <br />
+                Registration Id: <br /><br />
               </label>
               <input
                 className="form-input"
